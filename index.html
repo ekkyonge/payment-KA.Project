@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment KA.Project</title>
+    <link rel="icon" href="img/logo2.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Form Pembayaran</h2>
+
+      <div>
+        <label for="nama">isi nama dan produk yang dipilih</label>
+        <input
+          type="text"
+          id="nama"
+          placeholder="ex: John doe, wallpaper / John doe, PPT"
+        />
+      </div>
+
+      <div>
+        <label for="jumlah">Jumlah Pembayaran (Rp)</label>
+        <input type="number" id="jumlah" placeholder="ex: 2.000" />
+      </div>
+
+      <div>
+        <label for="metode">Pilih Metode Pembayaran</label>
+        <select id="metode" onchange="tampilkanInstruksi()">
+          <option value="">--Pilih--</option>
+          <option value="Shopee">Shopeepay</option>
+        </select>
+      </div>
+
+      <div id="hasil">Pilih metode pembayaran untuk melihat instruksi.</div>
+
+      <div>
+        <h4>
+          Setelah mengisi semua form, klik tombol dibawah ini. lalu akan di
+          arahkan ke whatsapp admin dan kirimkan bukti pembayaran secara manual,
+          lalu tunggu admin mengirim file via whatsapp
+        </h4>
+      </div>
+
+      <button type="button" onclick="kirimWhatsApp()">Kirim Pembayaran</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
